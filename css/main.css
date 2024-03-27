@@ -1,7 +1,15 @@
-
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 body {
-    font-family: "Nunito Sans", sans-serif;  
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0; 
 }
 
 h1,
@@ -10,4 +18,36 @@ h3,
 h4,
 h5 {
     font-family: "Alata", sans-serif;
+    text-align: center;
+}
+
+.content-wrapper {
+    width: 90%;
+    margin: 0 1.25em;
+}
+
+.project-container {
+    margin-top: 1.25em;
+    margin-bottom: 2.5em;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a.project-button {
+    text-decoration: none;
+}
+
+.skills,
+.tools {
+    font-weight: 700;
+}
+
+.copyright {
+    text-align: center;
 }
