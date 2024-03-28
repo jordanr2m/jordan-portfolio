@@ -1,3 +1,10 @@
+:root {
+    --header: #EC91C4;
+    --accent: #351D77;
+    --projects: #EEE4F0;
+    --about: #E8F0E4;
+}
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -7,9 +14,18 @@ html {
     box-sizing: inherit;
 }
 
+/* ===== Global Styles (website coded mobile first) ===== */
 body {
+    /* min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
     font-family: "Nunito Sans", sans-serif;
-    margin: 0; 
+    font-size: 1em;
+    color: #332d3a;
+    background-color: white;
 }
 
 h1,
@@ -19,16 +35,40 @@ h4,
 h5 {
     font-family: "Alata", sans-serif;
     text-align: center;
+    margin: 0;
+    line-height: 1.5;
 }
 
-.content-wrapper {
-    width: 90%;
-    margin: 0 1.25em;
+h1 {
+    font-size: 1.75rem;
 }
 
-.project-container {
-    margin-top: 1.25em;
-    margin-bottom: 2.5em;
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #332d3a;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-top: 1em;
+}
+
+p {
+    margin: 0.1em 0;
+    line-height: 1.5;
+}
+
+p.description {
+    margin: 1.5em 0;
+}
+
+span {
+    font-weight: 700;
 }
 
 figure {
@@ -39,14 +79,99 @@ img {
     width: 100%;
 }
 
-a.project-button {
-    text-decoration: none;
+address {
+    font-style: normal;
 }
 
-.skills,
-.tools {
-    font-weight: 700;
+.content-wrapper {
+    width: 85%;
+    margin: 0 auto;
 }
+
+/* === Header Styles === */
+header {
+    background-color: var(--header);
+    color: var(--accent);
+    padding: 2em 0 3em 0;
+}
+
+header h2 {
+    margin-top: 2em;
+    font-weight: 500;
+}
+
+nav {
+    margin-bottom: 3.5em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    font-size: .75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+header nav ul li a:hover,   
+header nav ul li a:focus {
+    color: white;
+    background-color: var(--accent);
+    padding: 0.75em 0.75em;
+    border-radius: 2em;
+    outline: none;
+}
+
+/* ===== Project Section Styles ===== */
+section#projects {
+    padding-top: 2.5em;
+    background-color: var(--projects);
+}
+
+.projects-wrapper {
+    margin-top: 2.25em;
+}
+
+.project-container {
+    margin-bottom: 3em;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.project-container:last-of-type {
+    padding-bottom: 1.5em;
+}
+
+a.project-button {
+    text-decoration: none;
+    background-color: var(--header);
+    color: var(--accent);
+    font-weight: 700;
+    padding: 0.75em 1.5em;
+    border-radius: 1.5em;
+    margin: 1em 0 2em 0;
+    align-self: center;
+}
+
+a.project-button:hover,
+a.project-button:focus {
+    background-color: #F4BEDC;
+}
+
+/* ===== Skills Section styles ===== */
 
 .copyright {
     text-align: center;
