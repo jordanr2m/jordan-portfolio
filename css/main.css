@@ -63,10 +63,6 @@ p {
     line-height: 1.5;
 }
 
-p.description {
-    margin: 1.5em 0;
-}
-
 span {
     font-weight: 700;
 }
@@ -88,7 +84,7 @@ address {
     margin: 0 auto;
 }
 
-/* === Header Styles === */
+/* === Header & Nav Styles === */
 header {
     background-color: var(--header);
     color: var(--accent);
@@ -100,25 +96,23 @@ header h2 {
     font-weight: 500;
 }
 
-nav {
+header nav {
     margin-bottom: 3.5em;
 }
 
-ul {
+header nav ul {
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
 }
 
 header nav ul li {
     font-size: .75rem;
     font-weight: 800;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 header nav ul li a {
@@ -135,9 +129,9 @@ header nav ul li a:focus {
     outline: none;
 }
 
-/* ===== Project Section Styles ===== */
+/* ===== Projects Section styles ===== */
 section#projects {
-    padding-top: 2.5em;
+    padding: 2.5em 0 1em 0;
     background-color: var(--projects);
 }
 
@@ -146,21 +140,26 @@ section#projects {
 }
 
 .project-container {
-    margin-bottom: 3em;
     display: flex;
     flex-flow: column wrap;
+    margin-bottom: 2.5em;
 }
 
 .project-container:last-of-type {
-    padding-bottom: 1.5em;
+    margin-bottom: 1.75em;
+}
+
+p.description {
+    margin: 1.5em 0;
 }
 
 a.project-button {
     text-decoration: none;
+    cursor: pointer;
     background-color: var(--header);
     color: var(--accent);
     font-weight: 700;
-    padding: 0.75em 1.5em;
+    padding: 0.75em 2em;
     border-radius: 1.5em;
     margin: 1em 0 2em 0;
     align-self: center;
@@ -172,7 +171,39 @@ a.project-button:focus {
 }
 
 /* ===== Skills Section styles ===== */
+section#skills {
+    padding: 3em 0;
+    background-color: var(--accent);
+    color: white;
+}
 
+#skills h3 {
+    border-bottom: 1px solid white;
+}
+
+#skills h4 {
+    margin: 1.5em 0;
+    font-weight: 200;
+}
+
+.skills-wrapper p,
+.tools-wrapper p {
+    background-color: #F4BEDC;
+    color: #332d3a;
+    padding: 0.8em 0;
+    margin: 1.25em 0;
+    text-align: center;
+    font-size: 1.125em;
+}
+
+.skills-wrapper p:last-of-type {
+    margin-bottom: 2.5em;
+}
+
+/* ===== About Me Section styles ===== */
+
+
+/* ===== Footer styles ===== */
 .copyright {
     text-align: center;
 }
