@@ -14,7 +14,7 @@ html {
     box-sizing: inherit;
 }
 
-/* ===== Global Styles (website coded mobile first) ===== */
+/* ===== Global Styles (website coded Mobile first) ===== */
 body {
     /* min-height: 100vh;
     margin: 0;
@@ -41,6 +41,7 @@ h5 {
 
 h1 {
     font-size: 1.75rem;
+    margin: 0 0.25em;
 }
 
 h2 {
@@ -77,6 +78,7 @@ img {
 
 address {
     font-style: normal;
+    text-align: center;
 }
 
 .content-wrapper {
@@ -201,9 +203,85 @@ section#skills {
 }
 
 /* ===== About Me Section styles ===== */
+section#about {
+    padding: 4em 0;
+    background-color: var(--about);
+}
+
+.about-content-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.profile-pic {
+    max-width: 250px;
+}
+
+.about-text {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.about-text h3 {
+    margin: 1.5em 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.about-text h4 {
+    margin: 0 0 2em 0;
+    width: 90%;
+    text-align: center;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+/* ===== Contact Section / Footer styles ===== */
+footer#contact {
+    padding: 3em 0 1em 0;
+    background-color: var(--header);
+}
+
+#contact h3 {
+    margin-bottom: 0.75em;
+}
+
+#contact h5 {
+    font-size: 1.1em;
+    margin: 1.75em 0 0.5em 0;
+}
+
+#contact p {
+    margin: 0;
+}
+
+ul.social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact i {
+    color: var(--accent);
+    font-size: 1.75rem;
+}
+
+.meet-me-info {
+    margin-bottom: 2.25em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
 
 
-/* ===== Footer styles ===== */
+/* === Copyright styles === */
 .copyright {
     text-align: center;
+    font-size: 0.8em;
 }
