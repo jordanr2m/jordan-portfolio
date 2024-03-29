@@ -9,8 +9,10 @@ html {
     box-sizing: border-box;
     font-size: 16px;
 }
-  
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -125,14 +127,18 @@ header nav ul li a {
     text-decoration: none;
 }
 
-header nav ul li a:hover,   
+a[href="#contact"], 
+header nav ul li a:hover,
 header nav ul li a:focus {
     color: white;
     background-color: var(--accent);
-    padding: 0.75em 0.75em;
+    padding: 0.75em;
     border-radius: 2em;
     outline: none;
+    font-weight: 800;
+    transition: padding 0.35s;
 }
+
 
 /* ===== Projects Section styles ===== */
 section#projects {
@@ -155,9 +161,9 @@ section#projects {
 }
 
 img.project-preview {
-    -webkit-box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
-    -moz-box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
-    box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(120, 100, 120, 1);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(120, 100, 120, 1);
+    box-shadow: 3px 3px 8px 0px rgba(120, 100, 120, 1);
 }
 
 p.description {
@@ -307,7 +313,6 @@ ul.social-icons {
     align-items: center;
 }
 
-
 /* === Copyright styles === */
 .copyright {
     text-align: center;
@@ -316,4 +321,70 @@ ul.social-icons {
 
 #year {
     font-weight: normal;
+}
+
+
+/* ============= Media Querries ============= */
+/* === Tablet Styles === */
+@media only screen and (min-width: 768px) {
+
+    /* == Global Styles==  */
+    .content-wrapper {
+        max-width: 640px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    /* == Nav styles == */
+    header {
+        padding-top: 3em;
+        padding-bottom: 5em;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        margin-top: 2.25em;
+        font-weight: 400;
+    }
+
+    header nav {
+        margin-bottom: 5em;
+    }
+
+    header nav ul li {
+        font-size: 0.9rem;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a:focus {
+    padding: 0.8em;
+    }
+
+    /* ==== Projects section styles ==== */
+    section#projects {
+        padding-top: 3.5em;
+    }
+
+    .projects-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 3em;
+    }
+
+    .project-container {
+        flex-basis: 45%;
+    }
+
+
 }
