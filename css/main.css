@@ -68,6 +68,10 @@ span {
     font-weight: 700;
 }
 
+a {
+    color: var(--accent);
+}
+
 figure {
     margin: 0;
 }
@@ -119,7 +123,6 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: var(--accent);
 }
 
 header nav ul li a:hover,   
@@ -151,6 +154,12 @@ section#projects {
     margin-bottom: 1.75em;
 }
 
+img.project-preview {
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
+    box-shadow: 3px 3px 8px 0px rgba(120,100,120,1);
+}
+
 p.description {
     margin: 1.5em 0;
 }
@@ -159,7 +168,6 @@ a.project-button {
     text-decoration: none;
     cursor: pointer;
     background-color: var(--header);
-    color: var(--accent);
     font-weight: 700;
     padding: 0.75em 2em;
     border-radius: 1.5em;
@@ -170,6 +178,7 @@ a.project-button {
 a.project-button:hover,
 a.project-button:focus {
     background-color: #F4BEDC;
+    transform: scale(1.05);
 }
 
 /* ===== Skills Section styles ===== */
@@ -179,6 +188,15 @@ section#skills {
     color: white;
 }
 
+#skills i {
+    margin-right: 0.45em;
+    font-size: 1.25em;
+}
+
+#responsive i {
+    font-size: 1em;
+}
+
 #skills h3 {
     border-bottom: 1px solid white;
 }
@@ -186,6 +204,12 @@ section#skills {
 #skills h4 {
     margin: 1.5em 0;
     font-weight: 200;
+}
+
+#skills p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills-wrapper p,
@@ -259,6 +283,10 @@ footer#contact {
     margin: 0;
 }
 
+#contact a {
+    font-weight: 500;
+}
+
 ul.social-icons {
     list-style-type: none;
     margin: 0;
@@ -284,4 +312,8 @@ ul.social-icons {
 .copyright {
     text-align: center;
     font-size: 0.8em;
+}
+
+#year {
+    font-weight: normal;
 }
