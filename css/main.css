@@ -386,5 +386,10 @@ ul.social-icons {
         flex-basis: 45%;
     }
 
+    /* Use this when there is an odd number of divs in the 2 column layout */
+    .project-container:last-child {
+        margin: 0 auto;
+    }
+
 
 }
