@@ -127,7 +127,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-a[href="#contact"], 
+a[href="#contact"],
 header nav ul li a:hover,
 header nav ul li a:focus {
     color: white;
@@ -272,8 +272,9 @@ section#about {
 
 /* ===== Contact Section / Footer styles ===== */
 footer#contact {
-    padding: 3em 0 1em 0;
+    padding: 3em 0 0.8em 0;
     background-color: var(--header);
+    position: relative;
 }
 
 #contact h3 {
@@ -313,7 +314,7 @@ ul.social-icons {
     align-items: center;
 }
 
-/* === Copyright styles === */
+/* === Copyright & logo styles === */
 .copyright {
     text-align: center;
     font-size: 0.8em;
@@ -321,6 +322,13 @@ ul.social-icons {
 
 #year {
     font-weight: normal;
+}
+
+.moon-logo-icon {
+    max-width: 35px;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
 }
 
 
@@ -367,7 +375,7 @@ ul.social-icons {
 
     header nav ul li a:hover,
     header nav ul li a:focus {
-    padding: 0.8em;
+        padding: 0.8em;
     }
 
     /* ==== Projects section styles ==== */
@@ -394,25 +402,65 @@ ul.social-icons {
     }
 
     /* ==== Skills section styles ==== */
-    .skills-wrapper {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
+    section#skills {
+        padding: 3.5em 0 3.75em 0;
     }
 
-    .skills-wrapper p {
-        min-width: 45%;
-        padding: 0.8em 0.2em;
+    #skills h4 {
+        margin: 1.5em 0 1.25em 0;
+        font-size: 1.375rem;
     }
 
     #responsive i {
         font-size: 0.9em;
     }
 
-    .skills-wrapper p:last-of-type {
-        margin: 1.25em 0;
+    .tools-wrapper,
+    .skills-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.7em;
     }
 
+    .skills-wrapper p,
+    .tools-wrapper p,
+    .skills-wrapper p:last-of-type {
+        margin: 0.5em 0 1em 0;
+    }
+
+    /* ==== About section styles ==== */
+    section#about {
+        padding: 4.75em 0 4em 0;
+    }
+
+    .profile-pic {
+        max-width: 300px;
+    }
+
+    .about-text h3 {
+        margin: 1.75em 0 1.5em 0;
+    }
+
+    /* ==== Contact section / Footer styles ==== */
+    #contact h3 {
+        font-size: 1.75em;
+    }
+
+    #contact h5 {
+        margin-bottom: 1em;
+        font-size: 1.15em;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 0.9em;
+        margin-bottom: 1.5em;
+    }
+
+    #contact i {
+        color: var(--accent);
+        font-size: 1.9rem;
+    }
 
 }
