@@ -373,6 +373,7 @@ ul.social-icons {
     /* ==== Projects section styles ==== */
     section#projects {
         padding-top: 3.5em;
+        padding-bottom: 3em;
     }
 
     .projects-wrapper {
@@ -384,11 +385,33 @@ ul.social-icons {
 
     .project-container {
         flex-basis: 45%;
+        margin-bottom: 3em;
     }
 
     /* Use this when there is an odd number of divs in the 2 column layout */
     .project-container:last-child {
         margin: 0 auto;
+    }
+
+    /* ==== Skills section styles ==== */
+    .skills-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .skills-wrapper p {
+        min-width: 45%;
+        padding: 0.8em 0.2em;
+    }
+
+    #responsive i {
+        font-size: 0.9em;
+    }
+
+    .skills-wrapper p:last-of-type {
+        margin: 1.25em 0;
     }
 
 
