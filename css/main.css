@@ -18,16 +18,11 @@ html {
 
 /* ===== Global Styles (website coded Mobile first) ===== */
 body {
-    /* min-height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     font-family: "Nunito Sans", sans-serif;
     font-size: 1em;
     color: #29242e;
     background-color: white;
+    margin: 0 auto;
 }
 
 h1,
@@ -136,7 +131,13 @@ header nav ul li a:focus {
     border-radius: 2em;
     outline: none;
     font-weight: 800;
-    transition: padding 0.35s;
+    transition: padding 0.4s;
+}
+
+a[href="#contact"]:hover,       
+a[href="#contact"]:focus {
+    color: #29242e;
+    background-color: #D4D3E9;
 }
 
 
@@ -401,7 +402,7 @@ ul.social-icons {
         padding: 0.8em;
     }
 
-    /* ==== Projects section styles ==== */
+    /* == Projects section styles == */
     section#projects {
         padding-top: 3.5em;
         padding-bottom: 3em;
@@ -424,7 +425,7 @@ ul.social-icons {
         margin: 0 auto;
     }
 
-    /* ==== Skills section styles ==== */
+    /* == Skills section styles == */
     section#skills {
         padding: 3.5em 0 3.75em 0;
     }
@@ -451,7 +452,7 @@ ul.social-icons {
         margin: 0.5em 0 1em 0;
     }
 
-    /* ==== About section styles ==== */
+    /* == About section styles == */
     section#about {
         padding: 4.75em 0 4em 0;
     }
@@ -464,7 +465,7 @@ ul.social-icons {
         margin: 1.75em 0 1.5em 0;
     }
 
-    /* ==== Contact section / Footer styles ==== */
+    /* == Contact section / Footer styles == */
     #contact h3 {
         font-size: 1.75em;
     }
@@ -487,8 +488,12 @@ ul.social-icons {
     }
 }
 
-/* Media Queries added for landscape tablets and iPad Pro */
+/* ===== Styles added for landscape tablets and iPad Pro ===== */
 @media only screen and (min-width:1024px) {
+    body {
+        font-size: 18px;
+    }
+
     .content-wrapper {
         max-width: 900px;
     }
@@ -520,5 +525,89 @@ ul.social-icons {
 
     #contact h5 {
         font-size: 1.3rem;
+    }
+}
+
+/* ===== Dekstop Styles ===== */
+@media only screen and (min-width:1200px) {
+    /* == Global Styles==  */
+    body {
+        font-size: 20px;
+    }
+
+    .content-wrapper {
+        max-width: 1400px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.25rem;
+    }
+
+    /* == Nav styles == */
+    header {
+        padding-top: 3.8em;
+    }
+
+    header nav ul {
+        justify-content: flex-end;
+    }
+
+    header nav ul li {
+        margin-left: 3em;
+        font-size: 1em;
+    }
+
+    .home-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h2 {
+        font-size: 1.75rem;
+        margin-top: 2.75em;
+        font-weight: 500;
+        width: 70%;
+    }
+
+    /* == Projects section styles == */
+    section#projects {
+        padding-bottom: 0;
+    }
+    
+    .projects-wrapper {
+        justify-content: space-around;
+    }
+
+    /* Need this for 3 column layout */
+    .project-container:last-child {
+        margin: 0;
+    }
+
+    .project-container {
+        flex-basis: 30%;
+    }
+
+    .project-container h4 {
+        margin-top: 1.5em;
+    }
+
+    a.project-button {
+        margin-bottom: 3em;
+    }
+
+    
+
+    /* == Contact styles == */
+    #contact h3 {
+        font-size: 2em;
+    }
+
+    #contact h5 {
+        font-size: 1.5rem;
     }
 }
