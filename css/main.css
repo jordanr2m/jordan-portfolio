@@ -26,7 +26,7 @@ body {
     align-items: center; */
     font-family: "Nunito Sans", sans-serif;
     font-size: 1em;
-    color: #332d3a;
+    color: #29242e;
     background-color: white;
 }
 
@@ -166,6 +166,11 @@ img.project-preview {
     box-shadow: 3px 3px 8px 0px rgba(120, 100, 120, 1);
 }
 
+img.project-preview:hover {
+    transform: scale(1.05);
+    transition: transform 0.35s;
+}
+
 p.description {
     margin: 1.5em 0;
 }
@@ -173,17 +178,35 @@ p.description {
 a.project-button {
     text-decoration: none;
     cursor: pointer;
-    background-color: var(--header);
     font-weight: 700;
     padding: 0.75em 2em;
     border-radius: 1.5em;
     margin: 1em 0 2em 0;
     align-self: center;
+    /* animation styles */
+    background: linear-gradient(-45deg, #fbc5e3, var(--header), #f57bbf);
+    background-size: 400% 400%;
+    animation: gradient 3s ease-in-out infinite;
+}
+
+/* Button animation code */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 a.project-button:hover,
 a.project-button:focus {
-    background-color: #F4BEDC;
+    background: #F4BEDC;
     transform: scale(1.05);
 }
 
@@ -462,5 +485,40 @@ ul.social-icons {
         color: var(--accent);
         font-size: 1.9rem;
     }
+}
 
+/* Media Queries added for landscape tablets and iPad Pro */
+@media only screen and (min-width:1024px) {
+    .content-wrapper {
+        max-width: 900px;
+    }
+
+    header h2 {
+        margin-top: 2.6em;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    header {
+        padding-top: 3.5em;
+        padding-bottom: 5.25em;
+    }
+
+    header nav {
+        margin-bottom: 5.5em;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+    }
+
+    #contact h5 {
+        font-size: 1.3rem;
+    }
 }
