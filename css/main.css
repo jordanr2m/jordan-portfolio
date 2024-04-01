@@ -1,4 +1,5 @@
 :root {
+    --font: #29242e;
     --header: #EC91C4;
     --accent: #351D77;
     --projects: #EEE4F0;
@@ -20,7 +21,7 @@ html {
 body {
     font-family: "Nunito Sans", sans-serif;
     font-size: 1em;
-    color: #29242e;
+    color: var(--font);
     background-color: white;
     margin: 0 auto;
 }
@@ -48,7 +49,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #332d3a;
+    border-bottom: 1px solid var(--font);
 }
 
 h4 {
@@ -136,7 +137,7 @@ header nav ul li a:focus {
 
 a[href="#contact"]:hover,       
 a[href="#contact"]:focus {
-    color: #29242e;
+    color: var(--font);
     background-color: #D4D3E9;
 }
 
@@ -225,6 +226,7 @@ section#skills {
 
 #responsive i {
     font-size: 1em;
+    margin-right: 0.5em;
 }
 
 #skills h3 {
@@ -467,12 +469,12 @@ ul.social-icons {
 
     /* == Contact section / Footer styles == */
     #contact h3 {
-        font-size: 1.75em;
+        font-size: 1.75rem;
     }
 
     #contact h5 {
         margin-bottom: 1em;
-        font-size: 1.15em;
+        font-size: 1.25rem;
     }
 
     .contact-info {
@@ -521,10 +523,6 @@ ul.social-icons {
 
     header nav ul li {
         font-size: 1rem;
-    }
-
-    #contact h5 {
-        font-size: 1.3rem;
     }
 }
 
@@ -577,19 +575,20 @@ ul.social-icons {
     /* == Projects section styles == */
     section#projects {
         padding-bottom: 0;
+        margin-bottom: -20px; /* offsets button margin */
     }
     
     .projects-wrapper {
         justify-content: space-around;
     }
 
+    .project-container {
+        flex-basis: 30%;
+    }
+
     /* Need this for 3 column layout */
     .project-container:last-child {
         margin: 0;
-    }
-
-    .project-container {
-        flex-basis: 30%;
     }
 
     .project-container h4 {
@@ -600,7 +599,50 @@ ul.social-icons {
         margin-bottom: 3em;
     }
 
-    
+    /* == Skills section styles == */
+    section#skills {
+        padding: 3.75em 0 3.9em 0;
+    }
+
+    #skills h4 {
+        font-size: 1.75rem;
+    }
+
+    .skills-wrapper p,
+    .tools-wrapper p {
+        font-size: 1.5rem;
+    }
+
+    /* == About section styles == */
+    section#about {
+        padding: 5em 0 5.5em 0;
+    }
+
+    .about-content-wrapper {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .profile-pic {
+        max-width: 380px;
+        margin-right: 1em;
+    }
+
+    .about-text {
+        flex-basis: 60%;
+        align-items: flex-start;
+    }
+
+    .about-text h3 {
+        margin: 0 0 0.9em 0;
+        font-size: 2.25em;
+    }
+
+    .about-text h4 {
+        text-align: left;
+        width: 100%;
+        font-size: 1.25em;
+    }
 
     /* == Contact styles == */
     #contact h3 {
