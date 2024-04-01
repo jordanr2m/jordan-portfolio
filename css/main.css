@@ -468,10 +468,6 @@ ul.social-icons {
     }
 
     /* == Contact section / Footer styles == */
-    #contact h3 {
-        font-size: 1.75rem;
-    }
-
     #contact h5 {
         margin-bottom: 1em;
         font-size: 1.25rem;
@@ -485,7 +481,6 @@ ul.social-icons {
     }
 
     #contact i {
-        color: var(--accent);
         font-size: 1.9rem;
     }
 }
@@ -542,7 +537,7 @@ ul.social-icons {
     }
 
     h3 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     /* == Nav styles == */
@@ -615,7 +610,7 @@ ul.social-icons {
 
     /* == About section styles == */
     section#about {
-        padding: 5em 0 5.5em 0;
+        padding: 8em 0 8.5em 0;
     }
 
     .about-content-wrapper {
@@ -645,11 +640,22 @@ ul.social-icons {
     }
 
     /* == Contact styles == */
-    #contact h3 {
-        font-size: 2em;
+    footer#contact {
+        padding: 3.5em 0 1em 0;
+    }
+    
+    #contact h5 {
+        font-size: 1.65rem;
     }
 
-    #contact h5 {
-        font-size: 1.5rem;
+    #contact i {
+        font-size: 2.5rem;
+    }
+
+    .moon-logo-icon {
+        max-width: 50px;
+        position: absolute;
+        right: 10px;
+        bottom: 6px;
     }
 }
