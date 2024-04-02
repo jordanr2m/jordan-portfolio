@@ -23,7 +23,6 @@ body {
     font-size: 1rem;
     color: var(--font);
     background-color: white;
-    margin: 0 auto;
 }
 
 h1,
@@ -144,7 +143,7 @@ a[href="#contact"]:focus {
 
 /* ===== Projects Section styles ===== */
 section#projects {
-    padding: 2.5em 0 1em 0;
+    padding: 2.5em 0;
     background-color: var(--projects);
 }
 
@@ -160,7 +159,7 @@ section#projects {
 
 .project-container:last-of-type {
     /* Evens out margin between sections */
-    margin-bottom: 1.5em;
+    margin-bottom: 0.75em;
 }
 
 img.project-preview {
@@ -253,7 +252,7 @@ section#skills {
 }
 
 .skills-wrapper p:last-of-type {
-    /* Add extra space between sections */
+    /* Adds extra space between sections */
     margin-bottom: 2.5em;
 }
 
@@ -329,7 +328,7 @@ ul.social-icons {
 }
 
 .meet-me-info {
-    margin-bottom: 2.25em;
+    margin-bottom: 2.5em;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -394,6 +393,7 @@ ul.social-icons {
         font-size: 0.9rem;
     }
 
+    a[href="#contact"],
     header nav ul li a:hover,
     header nav ul li a:focus {
         padding: 0.8em;
@@ -436,8 +436,8 @@ ul.social-icons {
         font-size: 0.9em;
     }
 
-    .tools-wrapper,
-    .skills-wrapper {
+    .skills-wrapper,
+    .tools-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1.7em;
@@ -451,7 +451,7 @@ ul.social-icons {
 
     /* == About section styles == */
     section#about {
-        padding: 4.75em 0 4em 0;
+        padding: 5em 0 4em 0;
     }
 
     .profile-pic {
@@ -459,13 +459,17 @@ ul.social-icons {
     }
 
     .about-text h3 {
-        margin: 1.75em 0 1.5em 0;
+        margin-top: 1.75em;
     }
 
     /* == Contact section / Footer styles == */
+    footer#contact {
+        padding-top: 3.5em;
+    }
+
     #contact h5 {
-        margin-bottom: 1em;
         font-size: 1.25rem;
+        margin-bottom: 1em;
     }
 
     .contact-info {
@@ -518,6 +522,7 @@ ul.social-icons {
 
 /* ===== Dekstop Styles ===== */
 @media only screen and (min-width:1200px) {
+
     /* == Global Styles==  */
     body {
         font-size: 20px;
@@ -547,7 +552,7 @@ ul.social-icons {
 
     header nav ul li {
         margin-left: 3em;
-        font-size: 1em;
+        font-size: 1.25rem;
     }
 
     .home-title {
@@ -566,7 +571,6 @@ ul.social-icons {
     /* == Projects section styles == */
     section#projects {
         padding-bottom: 0;
-        margin-bottom: -20px; /* offsets button margin */
     }
     
     .projects-wrapper {
@@ -606,7 +610,7 @@ ul.social-icons {
 
     /* == About section styles == */
     section#about {
-        padding: 8em 0 8.5em 0;
+        padding: 8em 0 8.75em 0;
     }
 
     .about-content-wrapper {
@@ -632,7 +636,7 @@ ul.social-icons {
     .about-text h4 {
         text-align: left;
         width: 100%;
-        font-size: 1.25em;
+        font-size: 1.75rem;
     }
 
     /* == Contact styles == */
@@ -642,6 +646,7 @@ ul.social-icons {
     
     #contact h5 {
         font-size: 1.65rem;
+        margin-top: 2em;
     }
 
     #contact i {
@@ -650,8 +655,7 @@ ul.social-icons {
 
     .moon-logo-icon {
         max-width: 50px;
-        position: absolute;
-        right: 10px;
+        right: 9px;
         bottom: 6px;
     }
 }
