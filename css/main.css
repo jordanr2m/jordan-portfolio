@@ -89,6 +89,12 @@ address {
 }
 
 /* === Header & Nav Styles === */
+.home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     background-color: var(--header);
     color: var(--accent);
@@ -96,8 +102,30 @@ header {
 }
 
 header h2 {
-    margin-top: 2em;
+    margin-top: 1.75em;
     font-weight: 500;
+}
+
+/* Replay button */
+#replay {
+    align-self: flex-end;
+    margin-right: 30px;
+    color: var(--font);
+    background-color: var(--about);
+    font-size: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    padding: 0 7px 2px 7px;
+    transition: opacity 0.6s ease-in-out 0.2s;
+    opacity: 0; /* Hides button by default */
+}
+
+#replay:hover,
+#replay:focus {
+    background-color: var(--projects);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.35s;
 }
 
 header nav {
@@ -381,8 +409,12 @@ ul.social-icons {
 
     header h2 {
         font-size: 1.5rem;
-        margin-top: 2.25em;
+        margin-top: 2em;
         font-weight: 400;
+    }
+
+    #replay {
+        margin-top: -2px;
     }
 
     header nav {
@@ -494,8 +526,17 @@ ul.social-icons {
         max-width: 900px;
     }
 
+    h1 {
+        font-size: 2.75rem;
+    }
+
     header h2 {
-        margin-top: 2.6em;
+        margin-top: 2.7em;
+    }
+
+    #replay {
+        margin-right: 100px;
+        margin-top: -5px;
     }
 
     h3 {
@@ -529,8 +570,8 @@ ul.social-icons {
     }
 
     .content-wrapper {
-        width: 90%;
         max-width: 1400px;
+        width: 90%;
     }
 
     h1 {
@@ -555,10 +596,11 @@ ul.social-icons {
         font-size: 1.25rem;
     }
 
-    .home-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #replay {
+        margin-right: 250px;
+        margin-top: -8px;
+        font-size: 1.4rem;
+        padding: 1px 8px 3px 8px;
     }
 
     header h2 {
