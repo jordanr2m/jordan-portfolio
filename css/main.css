@@ -117,7 +117,8 @@ header h2 {
     border: none;
     padding: 0 7px 2px 7px;
     transition: opacity 0.6s ease-in-out 0.2s;
-    opacity: 0; /* Hides button by default */
+    opacity: 0;
+    /* Hides button by default */
 }
 
 #replay:hover,
@@ -162,7 +163,7 @@ header nav ul li a:focus {
     transition: padding 0.4s;
 }
 
-a[href="#contact"]:hover,       
+a[href="#contact"]:hover,
 a[href="#contact"]:focus {
     color: var(--font);
     background-color: #D4D3E9;
@@ -218,7 +219,7 @@ a.project-button {
     animation: gradient 3s ease-in-out infinite;
 }
 
-/* Button animation code */
+/* Project button animation */
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -283,6 +284,35 @@ section#skills {
     /* Adds extra space between sections */
     margin-bottom: 2.5em;
 }
+
+/* Skills button shine animation */
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 4s infinite linear; /* Animation */
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
 
 /* ===== About Me Section styles ===== */
 section#about {
@@ -613,7 +643,7 @@ ul.social-icons {
     section#projects {
         padding-bottom: 0;
     }
-    
+
     .projects-wrapper {
         justify-content: space-around;
     }
@@ -684,7 +714,7 @@ ul.social-icons {
     footer#contact {
         padding: 3.5em 0 1em 0;
     }
-    
+
     #contact h5 {
         font-size: 1.65rem;
         margin-top: 2em;
