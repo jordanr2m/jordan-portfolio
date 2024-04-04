@@ -129,6 +129,14 @@ header h2 {
     transition: transform 0.35s;
 }
 
+/* Replay button styles specific for FireFox */
+@-moz-document url-prefix() {
+    #replay {
+        padding: 3px 5px 4px 5px;
+        font-size: 1rem;
+    }
+}
+
 header nav {
     margin-bottom: 3.5em;
 }
@@ -296,21 +304,28 @@ section#skills {
     position: absolute;
     width: 100px;
     height: 100%;
-    background-image: linear-gradient(
-        120deg,
-        rgba(255,255,255, 0) 30%,
-        rgba(255,255,255, .8),
-        rgba(255,255,255, 0) 70%
-    );
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, .8),
+            rgba(255, 255, 255, 0) 70%);
     top: 0;
     left: -100px;
-    animation: shine 4s infinite linear; /* Animation */
+    animation: shine 4s infinite linear;
+    /* Animation */
 }
 
 @keyframes shine {
-    0% {left: -100px}
-    20% {left: 100%}
-    100% {left: 100%}
+    0% {
+        left: -100px
+    }
+
+    20% {
+        left: 100%
+    }
+
+    100% {
+        left: 100%
+    }
 }
 
 
@@ -411,6 +426,7 @@ ul.social-icons {
 
 
 /* ============= Media Queries ============= */
+
 /* === Tablet Styles === */
 @media only screen and (min-width: 768px) {
 
@@ -445,6 +461,13 @@ ul.social-icons {
 
     #replay {
         margin-top: -2px;
+    }
+
+    /* Replay button styles specific for FireFox */
+    @-moz-document url-prefix() {
+        #replay {
+            margin-right: 18px;
+        }
     }
 
     header nav {
@@ -569,6 +592,14 @@ ul.social-icons {
         margin-top: -5px;
     }
 
+    /* Replay button styles specific for FireFox */
+    @-moz-document url-prefix() {
+        #replay {
+            margin-right: 80px;
+            font-size: 1.1rem;
+        }
+    }
+
     h3 {
         font-size: 2rem;
     }
@@ -630,6 +661,14 @@ ul.social-icons {
         margin-top: -8px;
         font-size: 1.4rem;
         padding: 1px 8px 3px 8px;
+    }
+
+    /* Replay button styles specific for FireFox */
+    @-moz-document url-prefix() {
+        #replay {
+            margin-right: 235px;
+            font-size: 1.3rem;
+        }
     }
 
     header h2 {
