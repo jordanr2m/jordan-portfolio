@@ -597,6 +597,7 @@ ul.social-icons {
         #replay {
             margin-right: 80px;
             font-size: 1.1rem;
+            padding: 3px 6px 5px 6px;
         }
     }
 
@@ -668,6 +669,7 @@ ul.social-icons {
         #replay {
             margin-right: 235px;
             font-size: 1.3rem;
+            padding: 3px 6px 5px 6px;
         }
     }
 
@@ -768,6 +770,13 @@ ul.social-icons {
         max-width: 50px;
         right: 9px;
         bottom: 6px;
+    }
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;  
     }
 }
 
