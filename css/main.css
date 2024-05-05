@@ -693,6 +693,11 @@ ul.social-icons {
         flex-basis: 30%;
     }
 
+    /* Give more space between containers in 3 column layout */
+    .project-container:nth-child(2) {
+        margin: 0 30px;
+    }
+
     /* Need this for 3 column layout */
     .project-container:last-child {
         margin: 0;

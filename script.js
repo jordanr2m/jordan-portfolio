@@ -1,5 +1,5 @@
 // Populate Copyright year
-document.querySelector("#year").innerHTML = new Date().getFullYear();
+document.querySelector("#year").innerText = new Date().getFullYear();
 
 /////// Letter typing effect for site Title ///////
 const mainTitle = document.querySelector(".home-title h1");
