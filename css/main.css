@@ -108,10 +108,15 @@ header h2 {
     font-weight: 500;
 }
 
+a.replay,
+a.resume {
+    color: var(--font);
+    background-color: var(--about);
+}
+
 a.resume {
     margin-top: 3rem;
     text-decoration: none;
-    background-color: var(--about);
     font-weight: 700;
     padding: 0.75em 1.5em;
     border-radius: 1.5em;
@@ -121,8 +126,6 @@ a.resume {
 #replay {
     align-self: flex-end;
     margin-right: 30px;
-    color: var(--font);
-    background-color: var(--about);
     font-size: 1.25rem;
     border-radius: 50%;
     border: none;
