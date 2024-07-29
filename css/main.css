@@ -72,6 +72,8 @@ a {
 
 figure {
     margin: 0;
+    max-width: 450px;
+    align-self: center;
 }
 
 img {
@@ -224,13 +226,22 @@ p.description {
     margin: 1.5em 0;
 }
 
+.button-container {
+    margin: 1em 0 2em 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+a.repo-link,
 a.project-button {
     text-decoration: none;
     font-weight: 700;
     padding: 0.75em 2em;
     border-radius: 1.5em;
-    margin: 1em 0 2em 0;
-    align-self: center;
+}
+
+a.project-button {
     /* animation styles */
     background: linear-gradient(-45deg, #fbc5e3, var(--header), #f57bbf);
     background-size: 400% 400%;
@@ -255,6 +266,17 @@ a.project-button {
 a.project-button:hover,
 a.project-button:focus {
     background: #F4BEDC;
+    transform: scale(1.05);
+}
+
+a.repo-link {
+    background-color: white;
+}
+
+a.repo-link:hover,
+a.repo-link:focus {
+    background-color: var(--about);
+    color: var(--font);
     transform: scale(1.05);
 }
 
@@ -442,7 +464,7 @@ ul.social-icons {
 
     /* == Global Styles==  */
     .content-wrapper {
-        max-width: 640px;
+        max-width: 700px;
     }
 
     h1 {
@@ -725,8 +747,15 @@ ul.social-icons {
         margin-top: 1.5em;
     }
 
-    a.project-button {
+    .button-container {
         margin-bottom: 3em;
+        flex-wrap: wrap;
+    }
+
+    /* Add margin in case buttons wrap */
+    a.repo-link,
+    a.project-button {
+        margin-bottom: 1rem;
     }
 
     /* == Skills section styles == */
