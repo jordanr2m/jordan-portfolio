@@ -108,6 +108,50 @@ header h2 {
     font-weight: 500;
 }
 
+span.font-bold {
+    font-weight: 900;
+}
+
+header nav {
+    margin-bottom: 3.5em;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+a[href="#contact"],
+header nav ul li a:hover,
+header nav ul li a:focus {
+    color: white;
+    background-color: var(--accent);
+    padding: 0.75em;
+    border-radius: 2em;
+    outline: none;
+    font-weight: 800;
+    transition: padding 0.4s;
+}
+
+a[href="#contact"]:hover,
+a[href="#contact"]:focus {
+    color: var(--font);
+    background-color: #D4D3E9;
+}
+
 a.replay,
 a.resume {
     color: var(--font);
@@ -152,46 +196,6 @@ a.resume:hover,
     }
 }
 
-header nav {
-    margin-bottom: 3.5em;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    font-size: .75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-header nav ul li a {
-    text-decoration: none;
-}
-
-a[href="#contact"],
-header nav ul li a:hover,
-header nav ul li a:focus {
-    color: white;
-    background-color: var(--accent);
-    padding: 0.75em;
-    border-radius: 2em;
-    outline: none;
-    font-weight: 800;
-    transition: padding 0.4s;
-}
-
-a[href="#contact"]:hover,
-a[href="#contact"]:focus {
-    color: var(--font);
-    background-color: #D4D3E9;
-}
-
 
 /* ===== Projects Section styles ===== */
 section#projects {
@@ -206,7 +210,7 @@ section#projects {
 .project-container {
     display: flex;
     flex-flow: column wrap;
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
 }
 
 .project-container:last-of-type {
@@ -273,7 +277,8 @@ a.project-button:focus {
 }
 
 a.repo-link {
-    background-color: white;
+    background-color: var(--accent);
+    color: white;
 }
 
 a.repo-link:hover,
@@ -494,6 +499,20 @@ ul.social-icons {
         font-weight: 400;
     }
 
+    header nav {
+        margin-bottom: 5em;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+    }
+
+    a[href="#contact"],
+    header nav ul li a:hover,
+    header nav ul li a:focus {
+        padding: 0.8em;
+    }
+
     #replay {
         margin-top: -2px;
     }
@@ -503,20 +522,6 @@ ul.social-icons {
         #replay {
             margin-right: 18px;
         }
-    }
-
-    header nav {
-        margin-bottom: 5em;
-    }
-
-    header nav ul li {
-        font-size: 0.9rem;
-    }
-
-    a[href="#contact"],
-    header nav ul li a:hover,
-    header nav ul li a:focus {
-        padding: 0.8em;
     }
 
     a.resume {
@@ -626,20 +631,6 @@ ul.social-icons {
         margin-top: 2.7em;
     }
 
-    #replay {
-        margin-right: 100px;
-        margin-top: -5px;
-    }
-
-    /* Replay button styles specific for FireFox */
-    @-moz-document url-prefix() {
-        #replay {
-            margin-right: 80px;
-            font-size: 1.1rem;
-            padding: 3px 6px 5px 6px;
-        }
-    }
-
     h3 {
         font-size: 2rem;
     }
@@ -657,7 +648,21 @@ ul.social-icons {
     }
 
     header nav ul li {
-        font-size: 1rem;
+        font-size: 1.25rem;
+    }
+
+    #replay {
+        margin-right: 100px;
+        margin-top: -5px;
+    }
+
+    /* Replay button styles specific for FireFox */
+    @-moz-document url-prefix() {
+        #replay {
+            margin-right: 80px;
+            font-size: 1.1rem;
+            padding: 3px 6px 5px 6px;
+        }
     }
 }
 
@@ -693,7 +698,13 @@ ul.social-icons {
 
     header nav ul li {
         margin-left: 3em;
-        font-size: 1.25rem;
+    }
+
+    header h2 {
+        font-size: 1.75rem;
+        margin-top: 2.75em;
+        font-weight: 500;
+        width: 80%;
     }
 
     #replay {
@@ -710,13 +721,6 @@ ul.social-icons {
             font-size: 1.3rem;
             padding: 3px 6px 5px 6px;
         }
-    }
-
-    header h2 {
-        font-size: 1.75rem;
-        margin-top: 2.75em;
-        font-weight: 500;
-        width: 80%;
     }
 
     a.resume {
