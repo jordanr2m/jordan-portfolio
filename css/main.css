@@ -2,6 +2,7 @@
     --font: #29242e;
     --header: #EC91C4;
     --accent: #351D77;
+    --accent-light: #F4BEDC;
     --projects: #EEE4F0;
     --about: #E8F0E4;
 }
@@ -104,12 +105,15 @@ header {
 }
 
 header h2 {
-    margin-top: 1.75em;
     font-weight: 500;
+    margin-top: 1.75em;
+    line-height: 2.25rem;
 }
 
-span.font-bold {
-    font-weight: 900;
+span.highlight {
+    background-color: #D4D3E9;
+    padding: 0.2rem 0.5rem 0.4rem;
+    border-radius: 5px;
 }
 
 header nav {
@@ -272,7 +276,7 @@ a.project-button {
 
 a.project-button:hover,
 a.project-button:focus {
-    background: #F4BEDC;
+    background: var(--accent-light);
     transform: scale(1.05);
 }
 
@@ -320,7 +324,7 @@ section#skills {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F4BEDC;
+    background-color: var(--accent-light);
     color: var(--font);
     padding: 0.8em 0;
     margin: 1.25em 0;
@@ -497,6 +501,7 @@ ul.social-icons {
         font-size: 1.5rem;
         margin-top: 2em;
         font-weight: 400;
+        line-height: 3rem;
     }
 
     header nav {
