@@ -714,7 +714,7 @@ ul.social-icons {
 
     #replay {
         margin-right: 250px;
-        margin-top: -8px;
+        /* margin-top: -8px; */
         font-size: 1.4rem;
         padding: 1px 8px 3px 8px;
     }
